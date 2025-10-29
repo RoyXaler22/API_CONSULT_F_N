@@ -1,10 +1,9 @@
-from flask import Flask, jsonify
+from fastapi import FastAPI
+import pandas as pd
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/')
-def home():
-    return jsonify({"message": "¡Hola desde tu API en Netlify!"})
-
-if __name__ == '__main__':
-    app.run()
+@app.get("/")
+def read_root():
+    df = pd.read_parquet("Funnel_Exportado.parquet")
+    return {"rows": len(df)}
