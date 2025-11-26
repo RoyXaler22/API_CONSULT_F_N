@@ -2,26 +2,5 @@
   "name": "net-core-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
-  "type": "module",
-  
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RoyXaler22/API_CONSULT_F_N.git"
-  },
-
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RoyXaler22/API_CONSULT_F_N/issues"
-  },
-
-  "homepage": "https://github.com/RoyXaler22/API_CONSULT_F_N#readme",
-  
-  "dependencies": {
-    "duckdb": "^1.4.2",
-    "express": "^5.1.0",
-    "parquetjs-lite": "^0.8.7"
-  }
+  "type": "module"
 }
