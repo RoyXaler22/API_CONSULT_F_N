@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node api/app.mjs"
   },
   "repository": {
     "type": "git",
@@ -13,12 +14,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/RoyXaler22/API_CONSULT_F_N/issues"
   },
   "homepage": "https://github.com/RoyXaler22/API_CONSULT_F_N#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "duckdb": "^1.4.2",
+    "express": "^5.1.0",
+    "parquetjs-lite": "^0.8.7"
   }
 }
