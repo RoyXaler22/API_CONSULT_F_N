@@ -15,7 +15,7 @@ export default function handler(req, res) {
     }
 
     // Filtrar coincidencias
-    const resultados = data.filter(item => String(item[columna]) === String(valor));
+    const resultados = data.usuarios.filter(item => String(item[columna]) === String(valor));
 
     res.status(200).json(resultados);
   } catch (err) {
