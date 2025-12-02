@@ -1,18 +1,18 @@
 import express from 'express';
-import { obtenerAltas } from './api/altas/data_altas.js';
-import { buscarDito } from './api/dito/buscar_dito.js';
-import { consultarMorosidad } from './api/morosidad/consulta_moro.js';
-import { obtenerVentas } from './api/ventas/data_ventas.js';
+import dataAltasRouter from './api/altas/data_altas.js';
+import buscarDitoRouter from './api/dito/buscar_dito.js';
+import consultaMoroRouter from './api/morosidad/consulta_moro.js';
+import dataVentasRouter from './api/ventas/data_ventas.js';
 
 const app = express();
 
-// Rutas
-app.get('/api/altas', obtenerAltas);
-app.get('/api/dito', buscarDito);
-app.get('/api/morosidad', consultarMorosidad);
-app.get('/api/ventas', obtenerVentas);
+// Rutas agrupadas bajo /api
+app.use('/api', dataAltasRouter);
+app.use('/api', buscarDitoRouter);
+app.use('/api', consultaMoroRouter);
+app.use('/api', dataVentasRouter);
 
-// Puerto para Render
+// Puerto asignado por Render
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en puerto ${PORT}`);
